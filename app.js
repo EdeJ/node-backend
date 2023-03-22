@@ -6,9 +6,6 @@ app.use(cors({
   origin: 'http://localhost:4201'
 }));
 
-
-
-
 app.get('/',  (req, res) => {
   res.send('Hello World!');
 });
@@ -20,7 +17,7 @@ res.sendStatus(404);
 
 app.get('/200',(req, res) => {
   console.log('200 response');
-res.sendStatus(200);
+  res.send({});
 })
 
 app.get('/500',(req, res) => {
