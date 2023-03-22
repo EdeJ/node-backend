@@ -19,15 +19,22 @@ res.sendStatus(404);
 })
 
 app.get('/200',(req, res) => {
+  console.log('200 response');
 res.sendStatus(200);
 })
 
 app.get('/500',(req, res) => {
+  console.log('500 response');
 res.sendStatus(500);
+})
+
+app.get('/504',(req, res) => {
+  console.log('504 response');
+res.sendStatus(504);
 })
 
 
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Test backend listening on port 3000!');
 });
