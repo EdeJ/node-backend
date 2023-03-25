@@ -10,14 +10,14 @@ app.get('/',  (req, res) => {
   res.send('Hello World!');
 });
 
-app.get('/404',(req, res) => {
-  console.log('404 response');
-res.sendStatus(404);
-})
-
 app.get('/200',(req, res) => {
   console.log('200 response');
   res.send({});
+})
+
+app.get('/404',(req, res) => {
+  console.log('404 response');
+res.sendStatus(404);
 })
 
 app.get('/500',(req, res) => {
